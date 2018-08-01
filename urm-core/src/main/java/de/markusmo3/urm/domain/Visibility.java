@@ -1,7 +1,7 @@
 package de.markusmo3.urm.domain;
 
 public enum Visibility {
-    PUBLIC("+"), PROTECTED("#"), DEFAULT("~"), PRIVATE("-");
+    PUBLIC("+"), PROTECTED("#"), DEFAULT(""), PRIVATE("-");
 
     private String umlRepresentation;
 
