@@ -5,7 +5,7 @@
     <packaging>jar</packaging>
     <name>urm-core</name>
     <parent>
-        <groupId>com.github.markusmo3.urm</groupId>
+        <groupId>com.github.milvum.urm</groupId>
         <artifactId>urm-parent</artifactId>
         <version>1.4.6</version>
     </parent>
@@ -108,8 +108,8 @@
                         <configuration>
                             <transformers>
                                 <transformer
-                                        implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>de.markusmo3.urm.DomainMapperCli</mainClass>
+                                    implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                    <mainClass>com.milvum.urm.DomainMapperCli</mainClass>
                                 </transformer>
                             </transformers>
                         </configuration>

@@ -2,7 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <parent>
     <artifactId>urm-parent</artifactId>
-    <groupId>com.github.markusmo3.urm</groupId>
+    <groupId>com.github.milvum.urm</groupId>
     <version>1.4.6</version>
   </parent>
   <modelVersion>4.0.0</modelVersion>
@@ -39,7 +39,7 @@
             <configuration>
               <transformers>
                 <transformer>
-                  <mainClass>de.markusmo3.urm.DomainMapperCli</mainClass>
+                  <mainClass>com.milvum.urm.DomainMapperCli</mainClass>
                 </transformer>
               </transformers>
             </configuration>
