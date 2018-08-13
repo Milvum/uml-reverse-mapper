@@ -45,6 +45,9 @@ public class DomainMapperMojo extends AbstractMojo {
     @Parameter(property = "map.skipForProjects")
     private List<String> skipForProjects;
 
+    @Parameter(defaultValue = "true", property = "overwrite")
+    private boolean overwrite;
+
     public void execute() throws MojoExecutionException, MojoFailureException {
         if (skipForProjects != null && !skipForProjects.isEmpty()) {
             String projectName = project.getName();
@@ -69,7 +72,7 @@ public class DomainMapperMojo extends AbstractMojo {
                 Reflections.log = null;
             }
 
-            if (!Files.exists(path)) {
+            if (overwrite || !Files.exists(path)) {
                 List<URL> projectClasspathList = getClasspathUrls();
 
                 if (fieldIgnores != null && !fieldIgnores.isEmpty()) {
