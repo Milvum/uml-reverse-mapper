@@ -28,7 +28,8 @@ public class DomainClassFinder {
                 .flatMap(Collection::stream)
                 .filter(DomainClassFinder::isNotPackageInfo)
                 .filter(DomainClassFinder::isNotAnonymousClass)
-                .filter((Class<?> clazz) -> !ignores.contains(clazz.getName()) && !ignores.contains(clazz.getSimpleName()))
+                .filter((Class<?> clazz) -> !ignores.contains(clazz.getName()) && !ignores.contains(clazz.getSimpleName())
+                        && !ignores.contains(clazz.getPackage().getName()))
                 .sorted(Comparator.comparing(Class::getName))
                 .collect(Collectors.toList());
     }
